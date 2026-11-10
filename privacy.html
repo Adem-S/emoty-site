@@ -18,16 +18,17 @@
 <link rel="icon" href="/assets/favicon.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="stylesheet" href="/assets/style.css">
+<script>try{var l=localStorage.getItem('lang');if(l!=='en'&&(l==='fr'||/^fr\b/i.test(navigator.language||''))){location.replace('/fr/privacy'+location.search+location.hash)}}catch(e){}</script>
 </head>
 <body>
 <header class="top light">
   <a class="brand" href="/"><img src="/assets/icon.png" alt="" width="34" height="34">Emoty</a>
-  <a class="lang" href="/fr/privacy" hreflang="fr" lang="fr">Français</a>
+  <a class="lang" href="/fr/privacy" hreflang="fr" lang="fr" onclick="try{localStorage.setItem('lang','fr')}catch(e){}">Français</a>
 </header>
 <main class="wrap doc">
 <h1>Privacy Policy</h1>
 <p class="updated">Last updated : November 10, 2026</p>
-<div class="box"><p><strong>In short:</strong> Emoty has no account and no servers that store your journal. What you write stays on your iPhone. We do not use ads, tracking or analytics. The only data handled outside your device relates to subscriptions, through Apple and RevenueCat.</p></div>
+<div class="box"><p><strong>In short:</strong> Emoty has no account and no servers that store your journal. What you write stays on your iPhone and is never used for statistics. There are no ads in the app. The only data handled outside your device relates to subscriptions, through Apple and RevenueCat.</p></div>
 
 <h2>Who we are</h2>
 <p>Emoty is published by Ideonot (“we”). For any question about your data, contact us at <a href="mailto:support@ideonot.com">support@ideonot.com</a>.</p>
@@ -55,8 +56,8 @@
 <h2>What we do not do</h2>
 <ul>
   <li>No account, no email address or name collected by the app.</li>
-  <li>No advertising, no ad identifier (IDFA), no tracking across apps or websites.</li>
-  <li>No analytics or crash-reporting service added by us.</li>
+  <li>No ads in the app. We do not currently use the advertising identifier (IDFA) or track you across other companies’ apps and websites; the app would always ask your permission first.</li>
+  <li>No analytics service at this time. If we add anonymous usage measurement in the future (for example to understand retention or the performance of our ads), it will never include the content of your journal, and this policy will be updated beforehand.</li>
   <li>No sale or sharing of personal data.</li>
 </ul>
 
@@ -73,7 +74,7 @@
 <p>We may update this policy. The date at the top shows the latest version. Significant changes will be announced in the app or on this page.</p>
 
 <h2>This website</h2>
-<p>This website uses no cookies and no analytics. It is hosted by GitHub Pages, which may keep technical logs (such as IP addresses) for security reasons.</p>
+<p>This website currently uses no cookies and no analytics. It is hosted by GitHub Pages, which may keep technical logs (such as IP addresses) for security reasons.</p>
 </main>
 <footer>
   <div class="wrap foot">

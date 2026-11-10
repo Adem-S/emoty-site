@@ -24,23 +24,23 @@ const T = {
     store: storeUrl ? ['Download on the', 'App Store'] : ['Coming soon on the', 'App Store'],
     home: {
       title: 'Emoty — Feelings & Affirmations',
-      desc: 'Write how you feel, meet the character of your emotion and read affirmations made for your day. A private journal that stays on your iPhone.',
+      desc: 'Write how you feel each day, understand your emotions and read affirmations made for your day. A private journal that stays on your iPhone.',
       eyebrow: 'For iPhone',
       h1: 'Put your feelings into words.',
-      lead: 'Write how you feel, meet the little character of your emotion and read affirmations chosen for your day. A gentle journal that stays on your iPhone.',
+      lead: 'Write down how you feel each day, understand what you are going through and read affirmations chosen for your day. A gentle journal that stays on your iPhone.',
       note: 'Free to use. No account needed.',
       featH: 'A small moment for yourself, every day',
       featSub: 'Emoty helps you notice what you feel, without judgment and without pressure.',
       feats: [
         ['joy', '✍️', 'Write, your way', 'Type or dictate a few words. Emoty suggests the emotion behind them, and you can always change it.'],
         ['sadness', '🫧', 'Meet your emotions', 'Each feeling becomes a character in your space. Watch your mind fill up day after day.'],
-        ['calm', '🌿', 'Affirmations for you', 'A thousand gentle affirmations, picked for how you feel today, plus themed collections.'],
+        ['calm', '🌿', 'Affirmations for you', 'Thousands of gentle affirmations, picked for how you feel today, plus themed collections.'],
         ['pride', '📆', 'See your story', 'Look back on your days and weeks, and see which emotions take the most space.'],
         ['motivation', '🔔', 'Gentle reminders', 'A kind word in the morning, an invitation to write in the evening. You choose.'],
         ['fear', '🧩', 'Widgets', 'Keep an affirmation on your Home Screen and Lock Screen.'],
       ],
       crowdH: 'Ten emotions, ten little characters',
-      crowdSub: 'Joy, calm, pride, motivation, sadness, fear, stress, fatigue, anger… and the in-between days.',
+      crowdSub: 'Joy, calm, pride, motivation, sadness, fear, stress, fatigue, anger… and neutral.',
       privH: 'Your journal stays yours',
       privSub: 'What you write is personal. Emoty was designed so it never has to leave your iPhone.',
       privList: [
@@ -48,7 +48,7 @@ const T = {
         'Your journal is stored on your iPhone, not on our servers.',
         'Emotion suggestions run on your device with Apple Intelligence.',
         'Dictation is transcribed on your iPhone.',
-        'No ads, no tracking, no analytics.',
+        'No ads.',
         'Encrypted backups, protected by a passphrase only you know.',
       ],
       privLink: 'Read the privacy policy',
@@ -72,23 +72,23 @@ const T = {
     store: storeUrl ? ['Télécharger dans', 'l’App Store'] : ['Bientôt sur', 'l’App Store'],
     home: {
       title: 'Emoty — Ressentis et affirmations',
-      desc: 'Écris ce que tu ressens, découvre le personnage de ton émotion et lis des affirmations choisies pour ta journée. Un journal privé qui reste sur ton iPhone.',
+      desc: 'Écris ce que tu ressens chaque jour, comprends tes émotions et lis des affirmations choisies pour ta journée. Un journal privé qui reste sur ton iPhone.',
       eyebrow: 'Pour iPhone',
       h1: 'Mets des mots sur ce que tu ressens.',
-      lead: 'Écris ce que tu ressens, découvre le petit personnage de ton émotion et lis des affirmations choisies pour ta journée. Un journal doux, qui reste sur ton iPhone.',
+      lead: 'Note ce que tu ressens chaque jour, comprends ce que tu traverses et lis des affirmations choisies pour ta journée. Un journal doux, qui reste sur ton iPhone.',
       note: 'Gratuit. Sans compte.',
       featH: 'Un petit moment pour toi, chaque jour',
       featSub: 'Emoty t’aide à remarquer ce que tu ressens, sans jugement et sans pression.',
       feats: [
         ['joy', '✍️', 'Écris à ta façon', 'Tape ou dicte quelques mots. Emoty te propose l’émotion qui s’en dégage, et tu peux toujours la changer.'],
         ['sadness', '🫧', 'Rencontre tes émotions', 'Chaque ressenti devient un personnage dans ton espace. Ton esprit se remplit jour après jour.'],
-        ['calm', '🌿', 'Des affirmations pour toi', 'Mille affirmations douces, choisies selon ce que tu ressens aujourd’hui, et des collections à thème.'],
+        ['calm', '🌿', 'Des affirmations pour toi', 'Des milliers d’affirmations douces, choisies selon ce que tu ressens aujourd’hui, et des collections à thème.'],
         ['pride', '📆', 'Revois ton histoire', 'Retrouve tes journées et tes semaines, et vois quelles émotions prennent le plus de place.'],
         ['motivation', '🔔', 'Des rappels doux', 'Un mot gentil le matin, une invitation à écrire le soir. C’est toi qui choisis.'],
         ['fear', '🧩', 'Des widgets', 'Garde une affirmation sur ton écran d’accueil et ton écran verrouillé.'],
       ],
       crowdH: 'Dix émotions, dix petits personnages',
-      crowdSub: 'Joie, calme, fierté, motivation, tristesse, peur, stress, fatigue, colère… et les jours entre deux.',
+      crowdSub: 'Joie, calme, fierté, motivation, tristesse, peur, stress, fatigue, colère… et neutre.',
       privH: 'Ton journal reste à toi',
       privSub: 'Ce que tu écris est personnel. Emoty a été conçu pour que ça n’ait jamais à quitter ton iPhone.',
       privList: [
@@ -96,7 +96,7 @@ const T = {
         'Ton journal est enregistré sur ton iPhone, pas sur nos serveurs.',
         'Les suggestions d’émotion sont faites sur ton appareil avec Apple Intelligence.',
         'La dictée est transcrite sur ton iPhone.',
-        'Pas de publicité, pas de pistage, pas de mesure d’audience.',
+        'Pas de publicité.',
         'Des sauvegardes chiffrées, protégées par une phrase secrète que toi seul connais.',
       ],
       privLink: 'Lire la politique de confidentialité',
@@ -115,6 +115,13 @@ const T = {
     },
   },
 };
+
+// Sur les pages anglaises (racine), un visiteur francophone est envoyé vers /fr/,
+// sauf s'il a choisi une langue avec le bouton (mémorisé dans le navigateur).
+function langScript(t, path) {
+  if (t.lang !== 'en') return '';
+  return `\n<script>try{var l=localStorage.getItem('lang');if(l!=='en'&&(l==='fr'||/^fr\\b/i.test(navigator.language||''))){location.replace('/fr/${path}'+location.search+location.hash)}}catch(e){}</script>`;
+}
 
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
@@ -141,7 +148,7 @@ function head(t, { title, desc, path }) {
 <meta property="og:image" content="${SITE}/assets/hero.webp">
 <link rel="icon" href="/assets/favicon.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/style.css">${langScript(t, path)}
 </head>
 <body>
 `;
@@ -150,7 +157,7 @@ function head(t, { title, desc, path }) {
 function topbar(t, path, light) {
   return `<header class="top${light ? ' light' : ''}">
   <a class="brand" href="${t.base}"><img src="/assets/icon.png" alt="" width="34" height="34">Emoty</a>
-  <a class="lang" href="${t.otherBase}${path}" hreflang="${t.other}" lang="${t.other}">${t.otherLabel}</a>
+  <a class="lang" href="${t.otherBase}${path}" hreflang="${t.other}" lang="${t.other}" onclick="try{localStorage.setItem('lang','${t.other}')}catch(e){}">${t.otherLabel}</a>
 </header>
 `;
 }
@@ -263,7 +270,7 @@ const mail = `<a href="mailto:${EMAIL}">${EMAIL}</a>`;
 
 const privacy = {
   en: ['Privacy Policy', 'How Emoty handles your data: your journal stays on your iPhone.', `
-<div class="box"><p><strong>In short:</strong> Emoty has no account and no servers that store your journal. What you write stays on your iPhone. We do not use ads, tracking or analytics. The only data handled outside your device relates to subscriptions, through Apple and RevenueCat.</p></div>
+<div class="box"><p><strong>In short:</strong> Emoty has no account and no servers that store your journal. What you write stays on your iPhone and is never used for statistics. There are no ads in the app. The only data handled outside your device relates to subscriptions, through Apple and RevenueCat.</p></div>
 
 <h2>Who we are</h2>
 <p>Emoty is published by ${PUBLISHER} (“we”). For any question about your data, contact us at ${mail}.</p>
@@ -291,8 +298,8 @@ const privacy = {
 <h2>What we do not do</h2>
 <ul>
   <li>No account, no email address or name collected by the app.</li>
-  <li>No advertising, no ad identifier (IDFA), no tracking across apps or websites.</li>
-  <li>No analytics or crash-reporting service added by us.</li>
+  <li>No ads in the app. We do not currently use the advertising identifier (IDFA) or track you across other companies’ apps and websites; the app would always ask your permission first.</li>
+  <li>No analytics service at this time. If we add anonymous usage measurement in the future (for example to understand retention or the performance of our ads), it will never include the content of your journal, and this policy will be updated beforehand.</li>
   <li>No sale or sharing of personal data.</li>
 </ul>
 
@@ -309,10 +316,10 @@ const privacy = {
 <p>We may update this policy. The date at the top shows the latest version. Significant changes will be announced in the app or on this page.</p>
 
 <h2>This website</h2>
-<p>This website uses no cookies and no analytics. It is hosted by GitHub Pages, which may keep technical logs (such as IP addresses) for security reasons.</p>
+<p>This website currently uses no cookies and no analytics. It is hosted by GitHub Pages, which may keep technical logs (such as IP addresses) for security reasons.</p>
 `],
   fr: ['Politique de confidentialité', 'Comment Emoty traite tes données : ton journal reste sur ton iPhone.', `
-<div class="box"><p><strong>En bref :</strong> Emoty n’a ni compte ni serveur qui stocke ton journal. Ce que tu écris reste sur ton iPhone. Nous n’utilisons ni publicité, ni pistage, ni mesure d’audience. Les seules données traitées hors de ton appareil concernent l’abonnement, via Apple et RevenueCat.</p></div>
+<div class="box"><p><strong>En bref :</strong> Emoty n’a ni compte ni serveur qui stocke ton journal. Ce que tu écris reste sur ton iPhone et ne sert jamais à des statistiques. Il n’y a pas de publicité dans l’app. Les seules données traitées hors de ton appareil concernent l’abonnement, via Apple et RevenueCat.</p></div>
 
 <h2>Qui sommes-nous</h2>
 <p>Emoty est éditée par ${PUBLISHER} (« nous »). Pour toute question sur tes données, écris-nous à ${mail}.</p>
@@ -340,8 +347,8 @@ const privacy = {
 <h2>Ce que nous ne faisons pas</h2>
 <ul>
   <li>Pas de compte : l’app ne collecte ni e-mail ni nom.</li>
-  <li>Pas de publicité, pas d’identifiant publicitaire (IDFA), pas de pistage entre apps ou sites.</li>
-  <li>Aucun service de mesure d’audience ou de rapport de plantage ajouté par nous.</li>
+  <li>Pas de publicité dans l’app. Nous n’utilisons pas, à ce jour, l’identifiant publicitaire (IDFA) ni de suivi entre les apps et sites d’autres entreprises ; l’app te demanderait toujours ton autorisation avant.</li>
+  <li>Aucun service de mesure d’audience pour le moment. Si nous ajoutons un jour une mesure d’utilisation anonyme (par exemple pour comprendre la fidélité des utilisateurs ou l’efficacité de nos publicités), elle n’inclura jamais le contenu de ton journal, et cette politique sera mise à jour avant.</li>
   <li>Aucune vente ni aucun partage de données personnelles.</li>
 </ul>
 
@@ -358,7 +365,7 @@ const privacy = {
 <p>Cette politique peut évoluer. La date en haut de page indique la dernière version. Les changements importants seront signalés dans l’app ou sur cette page.</p>
 
 <h2>Ce site</h2>
-<p>Ce site n’utilise ni cookies ni mesure d’audience. Il est hébergé par GitHub Pages, qui peut conserver des journaux techniques (comme les adresses IP) pour des raisons de sécurité.</p>
+<p>Ce site n’utilise pour le moment ni cookies ni mesure d’audience. Il est hébergé par GitHub Pages, qui peut conserver des journaux techniques (comme les adresses IP) pour des raisons de sécurité.</p>
 `],
 };
 
