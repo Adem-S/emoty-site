@@ -145,7 +145,7 @@ function head(t, { title, desc, path }) {
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${url}">
-<meta property="og:image" content="${SITE}/assets/hero.webp">
+<meta property="og:image" content="${SITE}/assets/characters-hero.webp">
 <link rel="icon" href="/assets/favicon.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="stylesheet" href="/assets/style.css">${langScript(t, path)}
@@ -197,7 +197,7 @@ ${topbar(t, '', false)}  <div class="wrap hero-grid">
       ${storeButton(t)}
       <p class="note">${h.note}</p>
     </div>
-    <div class="hero-img"><img src="/assets/hero.webp" alt="" width="1448" height="1086"></div>
+    <div class="hero-img"><img src="/assets/characters-hero.webp" alt="" width="1448" height="1086"></div>
   </div>
 </div>
 <main>
@@ -242,7 +242,7 @@ ${h.premList.map(([c, x]) => `          <li><i style="background:var(--${c})"></
         </ul>
         <p class="free">${h.premFree}</p>
       </div>
-      <img src="/assets/hero.webp" alt="" width="1448" height="1086" loading="lazy">
+      <img src="/assets/characters-hero.webp" alt="" width="1448" height="1086" loading="lazy">
     </div>
   </div>
 </section>
