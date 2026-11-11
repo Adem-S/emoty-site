@@ -308,10 +308,10 @@ const privacy = {
 </ul>
 
 <h2>Delete your data</h2>
-<p>In the app, Profile → “Erase all my data” removes your journal and associated data from your iPhone. Deleting the app also removes it. Backup files you saved elsewhere are not affected: delete them yourself if needed.</p>
+<p>Your journal and settings exist only on your iPhone: deleting the Emoty app permanently removes them. Backup files you saved elsewhere are not affected: delete them yourself if needed.</p>
 
 <h2>Your rights</h2>
-<p>Under the GDPR and similar laws, you have the right to access, correct, delete or object to the processing of your data. Since your journal never leaves your device, you control it directly. For subscription data, write to ${mail} and include, if possible, the support identifier shown in the app (Profile). You can also lodge a complaint with your data protection authority (in France, the CNIL).</p>
+<p>Under the GDPR and similar laws, you have the right to access, correct, delete or object to the processing of your data. Since your journal never leaves your device, you control it directly. For subscription data, write to ${mail} and include, if possible, the support identifier shown on the Premium screen of the app (for subscribers). You can also lodge a complaint with your data protection authority (in France, the CNIL).</p>
 
 <h2>Children</h2>
 <p>Emoty is not intended for children under 13 and some optional content contains mild language.</p>
@@ -361,10 +361,10 @@ const privacy = {
 </ul>
 
 <h2>Supprimer tes données</h2>
-<p>Dans l’app, Profil → « Effacer toutes mes données » supprime ton journal et les données associées de ton iPhone. Supprimer l’app les efface aussi. Les sauvegardes que tu as enregistrées ailleurs ne sont pas concernées : supprime-les toi-même si besoin.</p>
+<p>Ton journal et tes réglages n’existent que sur ton iPhone : supprimer l’app Emoty les efface définitivement. Les sauvegardes que tu as enregistrées ailleurs ne sont pas concernées : supprime-les toi-même si besoin.</p>
 
 <h2>Tes droits</h2>
-<p>Selon le RGPD, tu disposes d’un droit d’accès, de rectification, d’effacement et d’opposition. Ton journal ne quittant jamais ton appareil, tu en gardes directement le contrôle. Pour les données liées à l’abonnement, écris à ${mail} en joignant si possible l’identifiant de support affiché dans l’app (Profil). Tu peux aussi adresser une réclamation à la CNIL (cnil.fr).</p>
+<p>Selon le RGPD, tu disposes d’un droit d’accès, de rectification, d’effacement et d’opposition. Ton journal ne quittant jamais ton appareil, tu en gardes directement le contrôle. Pour les données liées à l’abonnement, écris à ${mail} en joignant si possible l’identifiant de support affiché sur l’écran Premium de l’app (pour les abonnés). Tu peux aussi adresser une réclamation à la CNIL (cnil.fr).</p>
 
 <h2>Enfants</h2>
 <p>Emoty ne s’adresse pas aux enfants de moins de 13 ans, et certains contenus facultatifs contiennent un langage familier.</p>
@@ -475,13 +475,13 @@ const support = {
 <p style="margin-top:20px">To help us, include your iPhone model, your iOS version and the app version (Profile, at the bottom). Never send us the content of your journal or your backup passphrase.</p>
 
 <h2>Frequently asked questions</h2>
-<details><summary>How do I restore my Premium subscription?</summary><p>Open Emoty → Premium → “Restore purchases”, with the same Apple Account used for the purchase.</p></details>
+<details><summary>How do I restore my Premium subscription?</summary><p>In Emoty, open Profile → Subscription → “Restore purchases”, with the same Apple Account used for the purchase.</p></details>
 <details><summary>How do I cancel my subscription?</summary><p>On your iPhone, open Settings → your name → Subscriptions → Emoty → Cancel subscription. You keep Premium until the end of the period already paid.</p></details>
 <details><summary>How do I get a refund?</summary><p>Refunds are handled by Apple: go to <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> and sign in with your Apple Account.</p></details>
-<details><summary>I changed iPhone. How do I get my journal back?</summary><p>Your journal is stored only on your iPhone. Before changing device, export an encrypted backup (Profile → Backup), keep the file and your passphrase, then restore it in Emoty on the new iPhone.</p></details>
+<details><summary>I changed iPhone. How do I get my journal back?</summary><p>Your journal is stored only on your iPhone. Before changing device, export an encrypted backup (Profile → Encrypted backup), keep the file and your passphrase, then restore it in Emoty on the new iPhone.</p></details>
 <details><summary>I forgot my backup passphrase.</summary><p>We cannot recover it: it is never sent to us. Without it, the backup cannot be opened.</p></details>
 <details><summary>Why can’t Emoty detect my emotion automatically?</summary><p>Automatic suggestions need an iPhone compatible with Apple Intelligence, with Apple Intelligence turned on. Otherwise, simply pick the emotion yourself.</p></details>
-<details><summary>How do I delete all my data?</summary><p>Profile → “Erase all my data”, or delete the app. Backups saved elsewhere are not affected.</p></details>
+<details><summary>How do I delete all my data?</summary><p>Delete the Emoty app from your iPhone: your journal and settings are removed with it. Backups saved elsewhere are not affected.</p></details>
 
 <div class="box"><p>Emoty does not replace professional support. If you are in distress, contact a professional or the emergency services (112 in Europe, 911 in the US). In France, call 3114 (free, 24/7).</p></div>
 `],
@@ -491,13 +491,13 @@ const support = {
 <p style="margin-top:20px">Pour nous aider, indique ton modèle d’iPhone, ta version d’iOS et la version de l’app (en bas du Profil). Ne nous envoie jamais le contenu de ton journal ni ta phrase secrète de sauvegarde.</p>
 
 <h2>Questions fréquentes</h2>
-<details><summary>Comment restaurer mon abonnement Premium ?</summary><p>Ouvre Emoty → Premium → « Restaurer mes achats », avec le même compte Apple que celui utilisé pour l’achat.</p></details>
+<details><summary>Comment restaurer mon abonnement Premium ?</summary><p>Dans Emoty, ouvre Profil → Abonnement → « Restaurer mes achats », avec le même compte Apple que celui utilisé pour l’achat.</p></details>
 <details><summary>Comment annuler mon abonnement ?</summary><p>Sur ton iPhone : Réglages → ton nom → Abonnements → Emoty → Annuler l’abonnement. Tu gardes Premium jusqu’à la fin de la période déjà payée.</p></details>
 <details><summary>Comment obtenir un remboursement ?</summary><p>Les remboursements sont gérés par Apple : va sur <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> et connecte-toi avec ton compte Apple.</p></details>
-<details><summary>J’ai changé d’iPhone. Comment retrouver mon journal ?</summary><p>Ton journal est enregistré uniquement sur ton iPhone. Avant de changer d’appareil, exporte une sauvegarde chiffrée (Profil → Sauvegarde), garde le fichier et ta phrase secrète, puis restaure-la dans Emoty sur le nouvel iPhone.</p></details>
+<details><summary>J’ai changé d’iPhone. Comment retrouver mon journal ?</summary><p>Ton journal est enregistré uniquement sur ton iPhone. Avant de changer d’appareil, exporte une sauvegarde chiffrée (Profil → Sauvegarde chiffrée), garde le fichier et ta phrase secrète, puis restaure-la dans Emoty sur le nouvel iPhone.</p></details>
 <details><summary>J’ai oublié ma phrase secrète de sauvegarde.</summary><p>Nous ne pouvons pas la retrouver : elle ne nous est jamais envoyée. Sans elle, la sauvegarde ne peut pas être ouverte.</p></details>
 <details><summary>Pourquoi Emoty ne détecte pas mon émotion automatiquement ?</summary><p>Les suggestions automatiques nécessitent un iPhone compatible avec Apple Intelligence, avec Apple Intelligence activé. Sinon, choisis simplement l’émotion toi-même.</p></details>
-<details><summary>Comment supprimer toutes mes données ?</summary><p>Profil → « Effacer toutes mes données », ou supprime l’app. Les sauvegardes enregistrées ailleurs ne sont pas concernées.</p></details>
+<details><summary>Comment supprimer toutes mes données ?</summary><p>Supprime l’app Emoty de ton iPhone : ton journal et tes réglages sont effacés avec elle. Les sauvegardes enregistrées ailleurs ne sont pas concernées.</p></details>
 
 <div class="box"><p>Emoty ne remplace pas un accompagnement professionnel. En cas de détresse, contacte un professionnel ou les urgences (112). En France, le 3114 est gratuit et joignable 24 h/24.</p></div>
 `],
