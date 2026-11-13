@@ -10,7 +10,7 @@ const EMAIL = 'support@ideonot.com';
 const PUBLISHER = 'Ideonot';
 // Identifiant Apple de l'app (App Store Connect → App Information → Apple ID).
 // Laisser vide tant que l'app n'est pas en ligne : le bouton affiche « Bientôt ».
-const APP_STORE_ID = '';
+const APP_STORE_ID = '6832748067';
 const UPDATED = { en: 'November 11, 2026', fr: '11 novembre 2026' };
 
 const storeUrl = APP_STORE_ID ? `https://apps.apple.com/app/id${APP_STORE_ID}` : '';
